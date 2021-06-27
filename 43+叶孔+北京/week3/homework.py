@@ -25,7 +25,6 @@ def cut_sentence_point(last,current_i,sentence,score):
     if current_i >= max_len:
         print(last, score)
         return
-
     for i,stri in enumerate(sentence):
         current = current+stri
         if current in dict:

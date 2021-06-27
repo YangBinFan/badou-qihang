@@ -52,7 +52,7 @@ def valid_data_load(file):
 if __name__ == '__main__':
     train_f,valid_f,data_f,schema_f = "./../data/train.json","./../data/valid.json","./../data/data.json","./../data/schema.json"
     model = QA_model(train_f,valid_f,data_f,schema_f)
-    model.train_model("./../data/train.json")
+    model.train_model(train_f)
     valid_data,valid_id = valid_data_load(valid_f)
     model.predict(valid_data,valid_id)
 
