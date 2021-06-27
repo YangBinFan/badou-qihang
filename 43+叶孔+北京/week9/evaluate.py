@@ -6,12 +6,12 @@ class Evaluator:
     def __init__(self,logger):
         self.logger = logger
 
-    def eval(self, config,input_strings):
+    def eval(self, config,input_strings,model_path):
         #配置保持和训练时一致
 
         vocab = build_vocab(config["vocab_path"])       #建立字表
         model = TorchModel(config)   #建立模型
-        model.load_state_dict(torch.load(config["model_path"]))   #加载训练好的模型权重
+        model.load_state_dict(torch.load(model_path))   #加载训练好的模型权重
         model.eval()
         for input_string in input_strings:
             #逐条预测

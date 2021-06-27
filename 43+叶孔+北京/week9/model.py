@@ -10,6 +10,7 @@ from torch.optim import Adam, SGD
 class TorchModel(nn.Module):
     def __init__(self, config,):
         super(TorchModel, self).__init__()
+        print("config['vocab_size']=",config["vocab_size"])
         self.embedding = nn.Embedding(config["vocab_size"] + 1, config["char_dim"]) #shape=(vocab_size, dim)
         self.rnn_layer = nn.RNN(input_size=config["char_dim"],
                                 hidden_size=config["hidden_size"],

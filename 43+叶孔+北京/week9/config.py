@@ -15,7 +15,8 @@ Config = {
     "optimizer": "adam",  # 优化器
     "learning_rate": 1e-3,  # 学习率
     "char_dim": 50,  # 每个字的维度
-    "num_rnn_layers": 3    # rnn层数
+    "num_rnn_layers": 3,    # rnn层数
+    "vocab_size":4621
 }
 
 
